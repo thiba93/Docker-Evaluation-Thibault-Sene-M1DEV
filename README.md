@@ -7,17 +7,13 @@ Démarrez l'application Docker sur votre ordinateur.
 Clonez ce projet.
 Si vous voulez lancer l'application avec les instructions de Dockerfile, il vous faudra taper ces commandes :
 
-scss
-Copier le code
 docker build -t flask-app .   (flask-app étant le nom de votre application)
 Puis vous allez devoir le lancer via cette commande :
 
-arduino
-Copier le code
-docker run -d -p 8080:5000 flask-app
+docker run -d -p 5000:5000 flask-app
 Si vous voulez lancer l'application avec Docker Compose, il vous faudra taper cette commande dans le terminal à la racine de ce projet :
 
-Copier le code
+
 docker-compose up
 Grâce à ces deux commandes, vous allez pouvoir :
 
@@ -29,14 +25,10 @@ Une page /apropos avec une petite description.
 Pour arrêter l'application
 Si vous avez utilisé l'image créée vous-même pour ensuite la lancer, il vous faudra :
 
-Copier le code
 docker ps
 Pour récupérer toutes les informations de tous les conteneurs en cours d'exécution, puis :
 
-arduino
-Copier le code
 docker stop <id_conteneur>
 Si vous avez utilisé docker-compose up, il vous faudra faire la commande :
 
-Copier le code
 docker-compose down
